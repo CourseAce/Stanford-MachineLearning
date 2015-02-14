@@ -116,9 +116,8 @@ fprintf('\n');
 % not need to be normalized.
 new = [1650 3];
 % should be normalized; otherwise 100 million for such a house 
-new = [(new(1)-mu(1))/sigma(1) (new(2)-mu(2))/sigma(2)];
-% new = featureNormalize(new);  % should not use the normalization function
-% because mu sigma should be derived from training set rather from testing
+new = [(new(1)-mu(1))/sigma(1) (new(2)-mu(2))/sigma(2)]
+% new = featureNormalize(new);
 new = [1 new];
 price = new*theta; % You should change this
 
