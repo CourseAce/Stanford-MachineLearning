@@ -9,7 +9,7 @@ The heart of MATLAB calculation is matrix.
 ```
 g = arrayfun(@(x) 1/(1+exp(-x)), z);
 ```
-Mathmatical operations use index starting from 1. And `X(1, :)` is different from `X(1)`
+Mathematical operations use index starting from 1. And `X(1, :)` is different from `X(1)`
 
 
 # Index
@@ -28,3 +28,9 @@ Mathmatical operations use index starting from 1. And `X(1, :)` is different fro
 1. Predict function (hypothesis)
 1. Cost function for regularized LR 
 1. Gradient descent for regularized LR 
+
+## Neural Networks: Representation
+1. Regularized Logistic Regression 
+1. One-vs-all classifier training 
+1. One-vs-all classifier prediction 
+1. Neural Network predict function 
