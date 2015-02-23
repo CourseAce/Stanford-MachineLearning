@@ -4,12 +4,10 @@ Andrew Ng is from Singapore :joy:
 
 #MATLAB
 ![](/img/logo.png)  
-The heart of MATLAB calculation is matrix.  
-
-```
-g = arrayfun(@(x) 1/(1+exp(-x)), z);
-```
-Mathematical operations use index starting from 1. And `X(1, :)` is different from `X(1)`
+* The heart of MATLAB calculation is matrix.  
+* `g = arrayfun(@(x) 1/(1+exp(-x)), z);`
+* Mathematical operations use index starting from 1. And `X(1, :)` is different from `X(1)`  
+* `theta'*theta` is different from `theta*theta'`; thus `theta .^2 is preferred`
 
 
 # Index

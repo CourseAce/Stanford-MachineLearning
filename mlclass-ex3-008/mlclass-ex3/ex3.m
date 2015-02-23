@@ -42,7 +42,7 @@ sel = X(rand_indices(1:100), :);
 displayData(sel);
 
 fprintf('Program paused. Press enter to continue.\n');
-pause;
+% pause;
 
 %% ============ Part 2: Vectorize Logistic Regression ============
 %  In this part of the exercise, you will reuse your logistic regression
@@ -51,6 +51,8 @@ pause;
 %  that, you will implement one-vs-all classification for the handwritten
 %  digit dataset.
 %
+[J, grad] = lrCostFunction(ones(size(X, 2), 1), X, y, 0.1);
+
 
 fprintf('\nTraining One-vs-All Logistic Regression...\n')
 
@@ -58,7 +60,8 @@ lambda = 0.1;
 [all_theta] = oneVsAll(X, y, num_labels, lambda);
 
 fprintf('Program paused. Press enter to continue.\n');
-pause;
+
+% pause;
 
 
 %% ================ Part 3: Predict for One-Vs-All ================
