@@ -32,3 +32,10 @@ Andrew Ng is from Singapore :joy:
 1. One-vs-all classifier training 
 1. One-vs-all classifier prediction 
 1. Neural Network predict function 
+
+## Neural Networks: Learning
+1. Feedforward and cost function 
+1. Regularized cost function 
+1. Sigmoid gradient
+1. Neural Net gradient function (Backpropagation) 
+1. Regularized gradient
