@@ -1,5 +1,5 @@
-# Coursera-MachineLearning
-[Coursera Machine Learning](https://www.coursera.org/course/ml)  
+# Stanford-MachineLearning
+[Stanford Coursera Machine Learning](https://www.coursera.org/course/ml)  
 Andrew Ng is from Singapore :joy:  
 
 #MATLAB
@@ -7,6 +7,7 @@ Andrew Ng is from Singapore :joy:
 * The heart of MATLAB calculation is matrix.  
 * `g = arrayfun(@(x) 1/(1+exp(-x)), z);`
 * Mathematical operations use index starting from 1. And `X(1, :)` is different from `X(1)`  
+* `A(:)` is used for matrix unrolling to vector
 * `theta'*theta` is different from `theta*theta'`; thus `theta .^2 is preferred`
 
 
