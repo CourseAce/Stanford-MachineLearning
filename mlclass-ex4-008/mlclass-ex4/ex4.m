@@ -81,7 +81,7 @@ fprintf(['Cost at parameters (loaded from ex4weights): %f '...
          '\n(this value should be about 0.287629)\n'], J);
 
 fprintf('\nProgram paused. Press enter to continue.\n');
-pause;
+% pause;
 
 %% =============== Part 4: Implement Regularization ===============
 %  Once your cost function implementation is correct, you should now
@@ -100,7 +100,7 @@ fprintf(['Cost at parameters (loaded from ex4weights): %f '...
          '\n(this value should be about 0.383770)\n'], J);
 
 fprintf('Program paused. Press enter to continue.\n');
-pause;
+% pause;
 
 
 %% ================ Part 5: Sigmoid Gradient  ================
@@ -117,7 +117,7 @@ fprintf('%f ', g);
 fprintf('\n\n');
 
 fprintf('Program paused. Press enter to continue.\n');
-pause;
+% pause;
 
 
 %% ================ Part 6: Initializing Pameters ================
@@ -147,7 +147,7 @@ fprintf('\nChecking Backpropagation... \n');
 checkNNGradients;
 
 fprintf('\nProgram paused. Press enter to continue.\n');
-pause;
+% pause;
 
 
 %% =============== Part 8: Implement Regularization ===============
@@ -169,7 +169,7 @@ fprintf(['\n\nCost at (fixed) debugging parameters (w/ lambda = 10): %f ' ...
          '\n(this value should be about 0.576051)\n\n'], debug_J);
 
 fprintf('Program paused. Press enter to continue.\n');
-pause;
+% pause;
 
 
 %% =================== Part 8: Training NN ===================
@@ -206,7 +206,7 @@ Theta2 = reshape(nn_params((1 + (hidden_layer_size * (input_layer_size + 1))):en
                  num_labels, (hidden_layer_size + 1));
 
 fprintf('Program paused. Press enter to continue.\n');
-pause;
+% pause;
 
 
 %% ================= Part 9: Visualize Weights =================
@@ -219,7 +219,7 @@ fprintf('\nVisualizing Neural Network... \n')
 displayData(Theta1(:, 2:end));
 
 fprintf('\nProgram paused. Press enter to continue.\n');
-pause;
+% pause;
 
 %% ================= Part 10: Implement Predict =================
 %  After training the neural network, we would like to use it to predict

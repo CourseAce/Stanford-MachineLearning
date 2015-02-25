@@ -63,6 +63,7 @@ function [J grad] = nnCostFunction(nn_params, ...
     %
     
     % -------------------------------------------------------------
+    % Part 1: Feedforward 
     % output 
     X = [ones(m, 1) X];
     hidden_layer = sigmoid(X*Theta1');
@@ -70,7 +71,7 @@ function [J grad] = nnCostFunction(nn_params, ...
     output_layer = sigmoid(hidden_layer*Theta2'); 
     
     % recode y
-    recoded = zeros(m, num_labels);
+    recoded = zeros(m, num_labels);  % possible use logic array, 1:10==1
     for i=1:m,
         recoded(i, y(i, 1)) = 1;
     end
@@ -78,6 +79,38 @@ function [J grad] = nnCostFunction(nn_params, ...
     % cost 
     J = 1/m*(sum(sum(-recoded.*log(output_layer) - (ones(size(recoded))-recoded).*log(ones(size(output_layer))-output_layer))));
     
+    % regularized 
+    J = J + lambda/(2*m)*(sum(sum(Theta1(:, 2:end) .^ 2))+sum(sum(Theta2(:, 2:end) .^ 2)));
+    
+    % Part 2: Backprop
+    % l, i, j
+    Delta_1 = zeros(size(Theta1));  % 25x401
+    Delta_2 = zeros(size(Theta2));  % 10x26
+    for i=1:m,
+        a_1 = X(i, :);  % 1x401  % row vector rather than col vector as in the mannual 
+        
+        z_2 = a_1*Theta1';  % 1x25
+        a_2 = sigmoid(z_2);
+        a_2 = [1 a_2];  % 1x26
+        
+        z_3 = a_2*Theta2';  % 1x10
+        a_3 = sigmoid(z_3);
+        
+        d_3 = a_3 - recoded(i, :);  % 1x10
+        
+        d_2 = d_3*Theta2.*sigmoidGradient([1 z_2]);  % 1x26  % adding 1 inside or outside does not matter 
+        d_2 = d_2(2:end);  % 1x25  
+        
+        Delta_1 = Delta_1 + d_2'*a_1;  
+        Delta_2 = Delta_2 + d_3'*a_2;
+    end
+    Theta1_grad = 1/m*Delta_1;
+    Theta2_grad = 1/m*Delta_2;
+    
+    
+    % Part 3: Regularization 
+    Theta1_grad = Theta1_grad + lambda/m*[zeros(size(Theta1, 1), 1) Theta1(:, 2:end)];
+    Theta2_grad = Theta2_grad + lambda/m*[zeros(size(Theta2, 1), 1) Theta2(:, 2:end)]; 
     % =========================================================================
 
     % Unroll gradients
