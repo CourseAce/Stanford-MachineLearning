@@ -40,3 +40,10 @@ Andrew Ng is from Singapore :joy:
 1. Sigmoid gradient
 1. Neural Net gradient function (Backpropagation) 
 1. Regularized gradient
+
+## Regularized Linear Regression and Bias/Variance
+1. Regularized Linear Regression Cost Function 
+1. Regularized Linear Regression Gradient 
+1. Learning Curve 
+1. Polynomial Feature Mapping 
+1. Cross Validation Curve 
