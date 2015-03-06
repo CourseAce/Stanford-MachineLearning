@@ -1,6 +1,6 @@
 # Stanford-MachineLearning
 [Stanford Coursera Machine Learning](https://www.coursera.org/course/ml)  
-Andrew Ng is from Singapore :joy:  
+Andrew Ng  
 
 #MATLAB
 ![](/img/logo.png)  
