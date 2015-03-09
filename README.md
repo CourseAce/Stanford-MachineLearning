@@ -9,7 +9,8 @@ Andrew Ng is from Singapore :joy:
 * Mathematical operations use index starting from 1. And `X(1, :)` is different from `X(1)`  
 * `A(:)` is used for matrix unrolling to vector
 * `theta'*theta` is different from `theta*theta'`; thus `theta .^2 is preferred`
-
+* `dpquit` to quit the debug mode 
+* `X(2:end, :)`, use `end` for slicing 
 
 # Index
 ## Linear Regression with Multiple Variables
@@ -42,8 +43,8 @@ Andrew Ng is from Singapore :joy:
 1. Regularized gradient
 
 ## Regularized Linear Regression and Bias/Variance
-1. Regularized Linear Regression Cost Function 
-1. Regularized Linear Regression Gradient 
-1. Learning Curve 
+1. Regularized Linear Regression Cost Function (review)
+1. Regularized Linear Regression Gradient (review)
+1. Learning Curve - bias-variance tradeoff
 1. Polynomial Feature Mapping 
-1. Cross Validation Curve 
+1. Cross Validation Curve - (select lambda)
