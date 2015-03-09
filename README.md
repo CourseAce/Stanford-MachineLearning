@@ -1,6 +1,6 @@
 # Stanford-MachineLearning
 [Stanford Coursera Machine Learning](https://www.coursera.org/course/ml)  
-Andrew Ng is from Singapore :joy:  
+Andrew Ng  
 
 #MATLAB
 ![](/img/logo.png)  
@@ -48,3 +48,4 @@ Andrew Ng is from Singapore :joy:
 1. Learning Curve - bias-variance tradeoff
 1. Polynomial Feature Mapping 
 1. Cross Validation Curve - (select lambda)
+
