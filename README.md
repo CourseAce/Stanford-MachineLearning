@@ -49,3 +49,8 @@ Andrew Ng
 1. Polynomial Feature Mapping 
 1. Cross Validation Curve - (select lambda)
 
+## Support Vector Machines 
+1. Gaussian Kernel
+1. Parameters (C, sigma)
+1. Email Preprocessing
+1. Email Feature Extraction 
