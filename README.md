@@ -11,6 +11,7 @@ Andrew Ng
 * `theta'*theta` is different from `theta*theta'`; thus `theta .^2 is preferred`
 * `dpquit` to quit the debug mode 
 * `X(2:end, :)`, use `end` for slicing 
+* cell array is indexed by `A{1}`
 
 # Index
 ## Linear Regression with Multiple Variables

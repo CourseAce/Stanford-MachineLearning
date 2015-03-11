@@ -109,7 +109,7 @@ model= svmTrain(X, y, C, @(x1, x2) gaussianKernel(x1, x2, sigma));
 visualizeBoundary(X, y, model);
 
 fprintf('Program paused. Press enter to continue.\n');
-pause;
+% pause;
 
 %% =============== Part 6: Visualizing Dataset 3 ================
 %  The following code will load the next dataset into your environment and 
