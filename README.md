@@ -55,3 +55,10 @@ Andrew Ng
 1. Parameters (C, sigma)
 1. Email Preprocessing
 1. Email Feature Extraction 
+
+## K-Means Clustering and PCA
+1. Find Closest Centroids
+1. Compute Centroid Means
+1. PCA
+1. Project Data
+1. Recover Data
