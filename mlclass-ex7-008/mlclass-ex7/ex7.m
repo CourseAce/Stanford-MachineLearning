@@ -44,7 +44,7 @@ fprintf(' %d', idx(1:3));
 fprintf('\n(the closest centroids should be 1, 3, 2 respectively)\n');
 
 fprintf('Program paused. Press enter to continue.\n');
-pause;
+% pause;
 
 %% ===================== Part 2: Compute Means =========================
 %  After implementing the closest centroids function, you should now
@@ -63,7 +63,7 @@ fprintf('   [ 5.813503 2.633656 ]\n');
 fprintf('   [ 7.119387 3.616684 ]\n\n');
 
 fprintf('Program paused. Press enter to continue.\n');
-pause;
+% pause;
 
 
 %% =================== Part 3: K-Means Clustering ======================
@@ -85,15 +85,15 @@ max_iters = 10;
 % but in practice you want to generate them automatically, such as by
 % settings them to be random examples (as can be seen in
 % kMeansInitCentroids).
-initial_centroids = [3 3; 6 2; 8 5];
-
+% initial_centroids = [3 3; 6 2; 8 5];
+initial_centroids = kMeansInitCentroids(X, K);
 % Run K-Means algorithm. The 'true' at the end tells our function to plot
 % the progress of K-Means
 [centroids, idx] = runkMeans(X, initial_centroids, max_iters, true);
 fprintf('\nK-Means Done.\n\n');
 
 fprintf('Program paused. Press enter to continue.\n');
-pause;
+% pause;
 
 %% ============= Part 4: K-Means Clustering on Pixels ===============
 %  In this exercise, you will use K-Means to compress an image. To do this,
@@ -106,7 +106,7 @@ pause;
 fprintf('\nRunning K-Means clustering on pixels from an image.\n\n');
 
 %  Load an image of a bird
-A = double(imread('bird_small.png'));
+A = double(imread('profile_pic_2.jpg'));  % load image as matrix 
 
 % If imread does not work for you, you can try instead
 %   load ('bird_small.mat');
@@ -119,11 +119,11 @@ img_size = size(A);
 % Reshape the image into an Nx3 matrix where N = number of pixels.
 % Each row will contain the Red, Green and Blue pixel values
 % This gives us our dataset matrix X that we will use K-Means on.
-X = reshape(A, img_size(1) * img_size(2), 3);
+X = reshape(A, img_size(1) * img_size(2), 3);  % to m*3, image matrix as row % every data point is of 3 dimensions
 
 % Run your K-Means algorithm on this data
 % You should try different values of K and max_iters here
-K = 16; 
+K = 16;  % to find the 16 colors 
 max_iters = 10;
 
 % When using K-Means, it is important the initialize the centroids
@@ -135,7 +135,7 @@ initial_centroids = kMeansInitCentroids(X, K);
 [centroids, idx] = runkMeans(X, initial_centroids, max_iters);
 
 fprintf('Program paused. Press enter to continue.\n');
-pause;
+% pause;
 
 
 %% ================= Part 5: Image Compression ======================

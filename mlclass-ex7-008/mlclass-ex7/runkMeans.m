@@ -48,7 +48,7 @@ for i=1:max_iters
         plotProgresskMeans(X, centroids, previous_centroids, idx, K, i);
         previous_centroids = centroids;
         fprintf('Press enter to continue.\n');
-        pause;
+%         pause;
     end
     
     % Given the memberships, compute new centroids
