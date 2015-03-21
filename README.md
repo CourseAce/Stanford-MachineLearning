@@ -4,15 +4,17 @@ Andrew Ng
 
 #MATLAB
 ![](/img/logo.png)  
-* The heart of MATLAB calculation is matrix.  
-* `g = arrayfun(@(x) 1/(1+exp(-x)), z);`
-* Mathematical operations use index starting from 1. And `X(1, :)` is different from `X(1)`  
-* `A(:)` is used for matrix unrolling to vector
-* `theta'*theta` is different from `theta*theta'`; thus `theta .^2 is preferred`
-* `dpquit` to quit the debug mode 
-* `X(2:end, :)`, use `end` for slicing 
-* cell array is indexed by `A{1}`
-* `~` to skip a return value: `[U, S, ~] = svd(Sigma)`
+* The heart of MATLAB is matrix.  
+* Default data type is double.
+* Lambda: `g = arrayfun(@(x) 1/(1+exp(-x)), z);`.
+* Mathematical operations use index starting from 1. And `X(1, :)` is different from `X(1)`.
+* `A(:)` is used for matrix unrolling to vector.
+* `theta'*theta` is different from `theta*theta'`; thus `theta .^2 is preferred`.
+* `dpquit` to quit the debug mode.
+* `X(2:end, :)`, use `end` for slicing.
+* Cell array is indexed by `A{1}`.
+* `~` to skip a return value: `[U, S, ~] = svd(Sigma)`.
+* Matrix multiplication orders depend on whether the data point is a col vector or row vector. 
 
 # Index
 ## Linear Regression with Multiple Variables
