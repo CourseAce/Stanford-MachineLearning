@@ -9,9 +9,9 @@ Andrew Ng
 * Lambda: `g = arrayfun(@(x) 1/(1+exp(-x)), z);`.
 * Mathematical operations use index starting from 1. And `X(1, :)` is different from `X(1)`.
 * `A(:)` is used for matrix unrolling to vector.
-* `theta'*theta` is different from `theta*theta'`; thus `theta .^2 is preferred`.
+* `theta'*theta` is different from `theta*theta'`; thus `theta .^2` is preferred.
 * `dpquit` to quit the debug mode.
-* `X(2:end, :)`, use `end` for slicing.
+* `X(2:end, :)`: use `end` for slicing.
 * Cell array is indexed by `A{1}`.
 * `~` to skip a return value: `[U, S, ~] = svd(Sigma)`.
 * Matrix multiplication orders depend on whether the data point is a col vector or row vector. 
@@ -47,21 +47,21 @@ Andrew Ng
 1. Regularized gradient
 
 ## Regularized Linear Regression and Bias/Variance
-1. Regularized Linear Regression Cost Function (review)
-1. Regularized Linear Regression Gradient (review)
-1. Learning Curve - bias-variance tradeoff
-1. Polynomial Feature Mapping 
-1. Cross Validation Curve - (select lambda)
+1. Regularized LR, cost function (review)
+1. Regularized LR, gradient (review)
+1. Learning Curve - Bias-Variance trade-off
+1. Polynomial feature mapping 
+1. Cross validation curve - (select lambda)
 
 ## Support Vector Machines 
 1. Gaussian Kernel
 1. Parameters (C, sigma)
-1. Email Preprocessing
-1. Email Feature Extraction 
+1. Email preprocessing
+1. Email feature extraction 
 
 ## K-Means Clustering and PCA
-1. Find Closest Centroids
-1. Compute Centroid Means
+1. Find closest centroids
+1. Compute centroid means
 1. PCA
-1. Project Data
-1. Recover Data
+1. Project data
+1. Recover data
