@@ -22,6 +22,7 @@
 clear ; close all; clc
 
 %% ================== Part 1: Load Example Dataset  ===================
+%  Simple 2D to 1D PCA 
 %  We start this exercise by using a small dataset that is easily to
 %  visualize
 %
@@ -36,7 +37,7 @@ plot(X(:, 1), X(:, 2), 'bo');
 axis([0.5 6.5 2 8]); axis square;
 
 fprintf('Program paused. Press enter to continue.\n');
-pause;
+% pause;
 
 
 %% =============== Part 2: Principal Component Analysis ===============
@@ -65,7 +66,7 @@ fprintf(' U(:,1) = %f %f \n', U(1,1), U(2,1));
 fprintf('\n(you should expect to see -0.707107 -0.707107)\n');
 
 fprintf('Program paused. Press enter to continue.\n');
-pause;
+% pause;
 
 
 %% =================== Part 3: Dimension Reduction ===================

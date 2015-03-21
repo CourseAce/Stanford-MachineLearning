@@ -153,7 +153,7 @@ idx = findClosestCentroids(X, centroids);
 
 % We can now recover the image from the indices (idx) by mapping each pixel
 % (specified by it's index in idx) to the centroid value
-X_recovered = centroids(idx,:);
+ = centroids(idx,:);
 
 % Reshape the recovered image into proper dimensions
 X_recovered = reshape(X_recovered, img_size(1), img_size(2), 3);
@@ -170,5 +170,5 @@ title(sprintf('Compressed, with %d colors.', K));
 
 
 fprintf('Program paused. Press enter to continue.\n');
-pause;
+% pause;
 

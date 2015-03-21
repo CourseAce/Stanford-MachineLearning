@@ -12,6 +12,7 @@ Andrew Ng
 * `dpquit` to quit the debug mode 
 * `X(2:end, :)`, use `end` for slicing 
 * cell array is indexed by `A{1}`
+* `~` to skip a return value: `[U, S, ~] = svd(Sigma)`
 
 # Index
 ## Linear Regression with Multiple Variables
