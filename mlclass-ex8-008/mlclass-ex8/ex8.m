@@ -40,7 +40,7 @@ xlabel('Latency (ms)');
 ylabel('Throughput (mb/s)');
 
 fprintf('Program paused. Press enter to continue.\n');
-pause
+% pause
 
 
 %% ================== Part 2: Estimate the dataset statistics ===================
@@ -66,7 +66,7 @@ xlabel('Latency (ms)');
 ylabel('Throughput (mb/s)');
 
 fprintf('Program paused. Press enter to continue.\n');
-pause;
+% pause;
 
 %% ================== Part 3: Find Outliers ===================
 %  Now you will find a good epsilon threshold using a cross-validation set
@@ -89,7 +89,7 @@ plot(X(outliers, 1), X(outliers, 2), 'ro', 'LineWidth', 2, 'MarkerSize', 10);
 hold off
 
 fprintf('Program paused. Press enter to continue.\n');
-pause;
+% pause;
 
 %% ================== Part 4: Multidimensional Outliers ===================
 %  We will now use the code from the previous part and apply it to a 
@@ -102,7 +102,7 @@ pause;
 load('ex8data2.mat');
 
 %  Apply the same steps to the larger dataset
-[mu sigma2] = estimateGaussian(X);
+[mu sigma2] = sub(X);
 
 %  Training set 
 p = multivariateGaussian(X, mu, sigma2);

@@ -15,6 +15,7 @@ Andrew Ng
 * Cell array is indexed by `A{1}`.
 * `~` to skip a return value: `[U, S, ~] = svd(Sigma)`.
 * Matrix multiplication orders depend on whether the data point is a col vector or row vector. 
+* For loop: `for epsilon = min(pval):stepsize:max(pval)`
 
 # Index
 ## Linear Regression with Multiple Variables
@@ -65,3 +66,11 @@ Andrew Ng
 1. PCA
 1. Project data
 1. Recover data
+
+## Anomaly Detection and Recommender Systems
+1. Estimate Gaussian parameters
+1. Select threshold
+1. Collaborative Filtering cost
+1. Collaborative Filtering gradient
+1. Regularized cost
+1. Gradient with regularization

@@ -40,7 +40,7 @@ ylabel('Movies');
 xlabel('Users');
 
 fprintf('\nProgram paused. Press enter to continue.\n');
-pause;
+% pause;
 
 %% ============ Part 2: Collaborative Filtering Cost Function ===========
 %  You will now implement the cost function for collaborative filtering.
@@ -66,7 +66,7 @@ fprintf(['Cost at loaded parameters: %f '...
          '\n(this value should be about 22.22)\n'], J);
 
 fprintf('\nProgram paused. Press enter to continue.\n');
-pause;
+% pause;
 
 
 %% ============== Part 3: Collaborative Filtering Gradient ==============
