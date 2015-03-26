@@ -40,14 +40,17 @@ Andrew Ng
 
 <img src="http://latex.codecogs.com/gif.latex?h_\theta(x)=g(\theta^Tx)" />  
 <img src="http://latex.codecogs.com/gif.latex?g(z)=\frac{1}{1+e^{-z}}" />  
-<img src="http://latex.codecogs.com/gif.latex?J(\theta)=\frac{1}{m}\sum_{i=1}^{m}{\big[-y^{(i)}\log{(h_\theta(x^{(i)}))}-(1-y^{i})\log{(1-h_\theta(x^{(i)}))}\big]}+\frac{\lambda}{2m}\sum_{j=1}^n{\theta_j^2}" />  
+<img src="http://latex.codecogs.com/gif.latex?J(\theta)=\frac{1}{m}\sum_{i=1}^{m}{\big[-y^{(i)}\log{(h_\theta(x^{(i)}))}-(1-y^{(i)})\log{(1-h_\theta(x^{(i)}))}\big]}+\frac{\lambda}{2m}\sum_{j=1}^n{\theta_j^2}" />  
 <img src="http://latex.codecogs.com/gif.latex?\frac{\partial J(\theta)}{\partial \theta_j} = \Bigg(\frac{1}{m}\sum_{i=1}^m{\big(h_\theta(x^{(i)})-y^{(i)}\big)x_j^{(i)}}\Bigg)+\frac{\lambda}{m}\theta_j" />  
 
 ## Neural Networks: Representation
 1. Regularized Logistic Regression 
 1. One-vs-all classifier training 
 1. One-vs-all classifier prediction 
-1. Neural Network predict function 
+1. [Neural Network predict function](https://github.com/idf/Stanford-MachineLearning/blob/develop/mlclass-ex3-008%2Fmlclass-ex3%2Fpredict.m)
+
+<img src="http://latex.codecogs.com/gif.latex?J(\theta)=\frac{1}{m}\sum{\big[-y\circ\log{(h_\theta(X))}-(1-y)\circ\log{(1-h_\theta(X))}\big]}+\frac{\lambda}{2m}\sum{\theta\circ\theta}" />  
+<img src="http://latex.codecogs.com/gif.latex?\frac{\partial J(\theta)}{\partial \theta} = \frac{1}{m}X^T\big(h_\theta(X)-y\big)+\frac{\lambda}{m}\theta" />  
 
 ## Neural Networks: Learning
 1. Feedforward and cost function 
@@ -56,6 +59,9 @@ Andrew Ng
 1. Neural Net gradient function (Backpropagation) 
 1. Regularized gradient
 
+<img src="http://latex.codecogs.com/gif.latex?g'(z)=g(z)(1-g(z))" />  
+TODO
+
 ## Regularized Linear Regression and Bias/Variance
 1. Regularized LR, cost function (review)
 1. Regularized LR, gradient (review)
@@ -63,11 +69,17 @@ Andrew Ng
 1. Polynomial feature mapping 
 1. Cross validation curve - (select lambda)
 
+<img src="http://latex.codecogs.com/gif.latex?h_\theta(x)=\theta_0+\theta_1 x_1+...+\theta_p x_p" />, where `x_i = normalize(x .^ i)`
 ## Support Vector Machines 
 1. Gaussian Kernel
 1. Parameters (C, sigma)
 1. Email preprocessing
 1. Email feature extraction 
+
+<img src="http://latex.codecogs.com/gif.latex?\operatornamewithlimits{min}_\theta C\sum_{i=1}^{m}{\big[y^{(i)}cost_1{(\theta^Tx^{(i)})}+(1-y^{(i)})cost_0{(\theta^Tx^{(i)})}\big]}+\frac{1}{2}\sum_{j=1}^n{\theta_j^2}" />  
+<img src="http://latex.codecogs.com/gif.latex?K_{gaussian}(x^{(i)}, x^{(j)})=\exp{\Bigg(-\frac{||x^{(i)}-x^{(j)}||^2}{2\sigma^2}\Bigg)}" />  
+<img src="http://latex.codecogs.com/gif.latex?\operatornamewithlimits{min}_\theta C\sum_{i=1}^{m}{\big[y^{(i)}cost_1{(\theta^Tf^{(i)})}+(1-y^{(i)})cost_0{(\theta^Tf^{(i)})}\big]}+\frac{1}{2}\sum_{j=1}^n{\theta_j^2}" />  
+<img src="http://latex.codecogs.com/gif.latex?f_k^{(i)} = K(x^{(i)}, l^{(k)})" />  
 
 ## K-Means Clustering and PCA
 1. Find closest centroids
