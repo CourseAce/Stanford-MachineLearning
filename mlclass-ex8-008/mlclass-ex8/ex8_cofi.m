@@ -80,7 +80,7 @@ fprintf('\nChecking Gradients (without regularization) ... \n');
 checkCostFunction;
 
 fprintf('\nProgram paused. Press enter to continue.\n');
-pause;
+% pause;
 
 
 %% ========= Part 4: Collaborative Filtering Cost Regularization ========
@@ -97,7 +97,7 @@ fprintf(['Cost at loaded parameters (lambda = 1.5): %f '...
          '\n(this value should be about 31.34)\n'], J);
 
 fprintf('\nProgram paused. Press enter to continue.\n');
-pause;
+% pause;
 
 
 %% ======= Part 5: Collaborative Filtering Gradient Regularization ======
@@ -112,7 +112,7 @@ fprintf('\nChecking Gradients (with regularization) ... \n');
 checkCostFunction(1.5);
 
 fprintf('\nProgram paused. Press enter to continue.\n');
-pause;
+% pause;
 
 
 %% ============== Part 6: Entering ratings for a new user ===============
@@ -128,24 +128,23 @@ my_ratings = zeros(1682, 1);
 
 % Check the file movie_idx.txt for id of each movie in our dataset
 % For example, Toy Story (1995) has ID 1, so to rate it "4", you can set
-my_ratings(1) = 4;
-
-% Or suppose did not enjoy Silence of the Lambs (1991), you can set
-my_ratings(98) = 2;
+my_ratings(1) = 1;  % Toy Story (1995)
 
 % We have selected a few movies we liked / did not like and the ratings we
 % gave are as follows:
-my_ratings(7) = 3;
-my_ratings(12)= 5;
-my_ratings(54) = 4;
-my_ratings(64)= 5;
-my_ratings(66)= 3;
-my_ratings(69) = 5;
-my_ratings(183) = 4;
-my_ratings(226) = 5;
-my_ratings(355)= 5;
+my_ratings(7) = 5;  % Twelve Monkeys (1995)
+my_ratings(12)= 10;  % Usual Suspects, The (1995)
+my_ratings(54) = 9;  % Outbreak (1995) 
+my_ratings(64)= 10;  % Shawshank Redemption, The (1994)
+my_ratings(66)= 1;  % While You Were Sleeping (1995)
+my_ratings(69) = 9;  % Forrest Gump (1994)
+my_ratings(98) = 9;  % Silence of the Lambs, The (1991)
+my_ratings(183) = 5;  % Alien (1979)
+my_ratings(226) = 8;  % Die Hard 2 (1990)
+my_ratings(355)= 5;  % Sphere (1998)
 
-fprintf('\n\nNew user ratings:\n');
+
+fprintf('\n\nNew user ratings (user input):\n');
 for i = 1:length(my_ratings)
     if my_ratings(i) > 0 
         fprintf('Rated %d for %s\n', my_ratings(i), ...
@@ -154,7 +153,7 @@ for i = 1:length(my_ratings)
 end
 
 fprintf('\nProgram paused. Press enter to continue.\n');
-pause;
+% pause;
 
 
 %% ================== Part 7: Learning Movie Ratings ====================
@@ -174,6 +173,7 @@ load('ex8_movies.mat');
 %  rating to movie i
 
 %  Add our own ratings to the data matrix
+%  not incremental 
 Y = [my_ratings Y];
 R = [(my_ratings ~= 0) R];
 
@@ -208,7 +208,7 @@ Theta = reshape(theta(num_movies*num_features+1:end), ...
 fprintf('Recommender system learning completed.\n');
 
 fprintf('\nProgram paused. Press enter to continue.\n');
-pause;
+% pause;
 
 %% ================== Part 8: Recommendation for you ====================
 %  After training the model, you can now make recommendations by computing
