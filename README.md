@@ -25,6 +25,9 @@ Andrew Ng
 1. Cost function for multi-var
 1. Gradient descent for multi-var
 1. Normal Equations 
+<img src="http://latex.codecogs.com/gif.latex?J(\theta)=\frac{1}{2m}\sum_{i=1}^{m}{\big(h_\theta(x^{(i)})-y^{(i)}\big)^2}" />  
+<img src="http://latex.codecogs.com/gif.latex?h_\theta(x)=\theta^Tx" />  
+<img src="http://latex.codecogs.com/gif.latex?\theta_j:=\theta_j-\alpha\frac{1}{m}\sum_{i=1}^{m}{\big(h_\theta(x^{(i)})-y^{(i)}\big)x_j^{(i)}}" />  
 
 ## Regularization - Logistic Regression 
 1. Sigmoid function
@@ -33,6 +36,9 @@ Andrew Ng
 1. Predict function (hypothesis)
 1. Cost function for regularized LR 
 1. Gradient descent for regularized LR 
+<img src="http://latex.codecogs.com/gif.latex?h_\theta(x)=g(\theta^Tx)" />  
+<img src="http://latex.codecogs.com/gif.latex?g(z)=\frac{1}{1+e^{-z}}" />  
+<img src="http://latex.codecogs.com/gif.latex?J(\theta)=\frac{1}{m}\sum_{i=1}^{m}{\big[-y^{(i)}\log{(h_\theta(x^{(i)}))}-(1-y^{i})\log{(1-h_\theta(x^{(i)}))}\big]}+\frac{\lambda}{2m}\sum_{j=1}^n{\theta_j^2}" />  
 
 ## Neural Networks: Representation
 1. Regularized Logistic Regression 
