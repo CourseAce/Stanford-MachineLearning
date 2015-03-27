@@ -88,6 +88,10 @@ TODO
 1. Project data
 1. Recover data
 
+<img src="http://latex.codecogs.com/gif.latex?c^{(i)}:= \operatornamewithlimits{argmin}_{j} ||x^{(i)}-\mu_j||^2" />   
+<img src="http://latex.codecogs.com/gif.latex?\mu_k:=\frac{1}{C_k}\sum_{i \in C_k}{x^{(i)}}" />  
+<img src="http://latex.codecogs.com/gif.latex?\Sigma=\frac{1}{m}X^TX" />  
+
 ## Anomaly Detection and Recommender Systems
 1. Estimate Gaussian parameters
 1. Select threshold
@@ -95,3 +99,8 @@ TODO
 1. Collaborative Filtering gradient
 1. Regularized cost
 1. Gradient with regularization
+
+<img src="http://latex.codecogs.com/gif.latex?p(x;\mu,\sigma^2)=\frac{1}{\sqrt{2\pi\sigma^2}}\exp{\Big(-\frac{(x-\mu)^2}{2\sigma^2}\Big)}" />  
+<img src="http://latex.codecogs.com/gif.latex?J(x^{(i)},...,x^{(n_m)},\theta^{1},...,\theta^{(n_u)})=\frac{1}{2}\sum_{(i,j):r(i,j)=1}{((\theta^{(j)})^Tx^{(i)}-y^{(i,j)})^2}+\frac{\lambda}{2}\sum_{j=1}^{n_u}{\sum_{k=1}^n{(\theta_k^{(j)}})^2}+\frac{\lambda}{2}\sum_{j=1}^{n_m}{\sum_{k=1}^n{(x_k^{(j)}})^2}" />  
+<img src="http://latex.codecogs.com/gif.latex?\frac{\partial J}{\partial x_k^{(i)}}=\sum_{j:r(i,j)=1}{\big((\theta^{(j)})^Tx^{(i)}-y^{(i,j)}\big)\theta_k^{(j)}}+\lambda x_k^{(i)}" />  
+<img src="http://latex.codecogs.com/gif.latex?\frac{\partial J}{\partial \theta_k^{(j)}}=\sum_{i:r(i,j)=1}{\big((\theta^{(j)})^Tx^{(i)}-y^{(i,j)}\big)x_k^{(i)}}+\lambda \theta_k^{(j)}" />  
