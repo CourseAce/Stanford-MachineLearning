@@ -60,7 +60,11 @@ Andrew Ng
 1. Regularized gradient
 
 <img src="http://latex.codecogs.com/gif.latex?g'(z)=g(z)(1-g(z))" />  
-TODO
+<img src="http://latex.codecogs.com/gif.latex?J(\theta)=\frac{1}{m}\sum_{i=1}^{m}\sum_{k=1}^K{{\big[-y_k^{(i)}\log{(h_\theta(x^{(i)}))_k}-(1-y_k^{(i)})\log{(1-h_\theta(x^{(i)}))_k}\big]}}+\frac{\lambda}{2m}\sum_{l}{\sum_{j\in (l+1)}{\sum_{k\in l}{(\Theta_{j,k}^{(l)})^2}}}" />  
+<img src="http://latex.codecogs.com/gif.latex?\delta_k^{(out)}=a_k^{(out)}-y_k" />  
+<img src="http://latex.codecogs.com/gif.latex?\delta^{(l)}= (\Theta^{(l)})^T\delta^{(l+1)}\circ g'(z^{(l)})" />  
+<img src="http://latex.codecogs.com/gif.latex?\Delta^{(l)}:=\Delta^{(l)}+\delta^{(l+1)}(a^{(l)})^T" />  
+<img src="http://latex.codecogs.com/gif.latex?\frac{\partial}{\partial \Theta_{ij}^{(l)}}J(\Theta)=D_{ij}^{(l)}=\frac{1}{m}\Delta_{ij}^{(l)}+\frac{\lambda}{m}\Theta_{ij}^{(l)}" />  
 
 ## Regularized Linear Regression and Bias/Variance
 1. Regularized LR, cost function (review)
